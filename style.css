@@ -7,12 +7,10 @@
 :root{
     --font-size-400: clamp(1.5rem, 0.6vw + 0.5rem, 3rem);
 
-    --font-size-main : clamp(1.5rem, 1.8rem + 0.2vh, 8rem);
+    --font-size-main : clamp(1.5rem, 1.5rem + 0.5vh, 8rem);
 
     --font-size-700 : clamp(3rem, 2.5rem + 0.3vw,10rem);
-
-
-
+    
 
     --color-white: #fff;
     --color-blue-400: #60a5fa;
@@ -20,6 +18,7 @@
 
 html{
     font-size: 10px;
+    font-family: "Roboto", sans-serif;
 }
 
 li, a{
@@ -38,7 +37,7 @@ header, aside, section{
 
     display: grid;
 
-    grid-template: 1fr 4fr / 1fr 4fr;
+    grid-template: 1fr 4fr / 0.8fr 4fr;
 }
 
 header{
@@ -53,11 +52,29 @@ section.main-section{
 }
 
 
-.sidebar .logo{
+
+/* SIDEBAR SECTION */
+
+
+.sidebar{
     padding: 2rem;
+
     display: grid;
-    grid-template-columns: 1rem 1rem;
-    gap: 2vw;
+    grid-template-rows: 1fr 1fr 5fr;
+    gap: 2vh;
+}
+
+
+
+/* SIDEBAR LOGO SECTION */
+
+.sidebar .logo{
+   
+    display: grid;
+    grid-template-columns: repeat(auto-fit,10px);
+    align-items: center;
+    gap: clamp(3rem, 1.90vw,5rem);
+    /* outline: 1px solid red; */
 }
 
 .sidebar .logo svg{
@@ -67,6 +84,40 @@ section.main-section{
 }
 .sidebar .logo h2{
     font-size: var(--font-size-700);
-    align-self: center;
     color:var(--color-white);
 }
+
+
+/* SIDEBAR NAV SECTION*/
+
+.sidebar nav{
+    /* outline: 1px solid red; */
+}
+
+.sidebar .settings{
+    /* outline: 1px solid red; */
+    padding-top: 4rem;
+}
+
+.sidebar .nav-item a{
+    color: var(--color-white);
+    font-size: var(--font-size-main);
+    font-weight: 800;
+}
+
+.sidebar .nav-item{
+    color: var(--color-white);
+    margin-bottom: 2rem;
+    /* outline: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit,10px);
+    align-items: end;
+    gap: clamp(2rem, 1.90vw,5rem);
+}
+
+.sidebar svg{
+    width: calc(1vw + 1rem);
+    height: calc(1vw + 1rem);
+    fill: var(--color-white);
+}
+
