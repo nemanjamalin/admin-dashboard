@@ -21,6 +21,12 @@ html{
     font-family: "Roboto", sans-serif;
 }
 
+#avatar{
+    fill: #fbbf24;
+    width: calc(2vh + 3rem);
+    height: calc(2vh + 3rem);
+}
+
 li, a{
     list-style: none;
     text-decoration: none;
@@ -73,13 +79,13 @@ section.main-section{
     display: grid;
     grid-template-columns: repeat(auto-fit,10px);
     align-items: center;
-    gap: clamp(3rem, 1.90vw,5rem);
+    gap: clamp(3rem, 2.90vw,5rem);
     /* outline: 1px solid red; */
 }
 
 .sidebar .logo svg{
-    width: calc(1vw + 2rem);
-    height: calc(1vw + 2rem);
+    width: calc(1vw + 2.8rem);
+    height: calc(1vw + 2.8rem);
     fill: var(--color-white);
 }
 .sidebar .logo h2{
@@ -120,4 +126,68 @@ section.main-section{
     height: calc(1vw + 1rem);
     fill: var(--color-white);
 }
+
+
+/* HEADER SECTION */
+
+.header{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.header-part{
+    border-bottom: red 2px solid;
+}
+
+.header .upper{
+    display: grid;
+    grid-template-columns: 3fr 2.5fr;
+}
+
+.header .upper svg{
+    width: calc(2vh + 1rem);
+    height: calc(2vh + 1rem);
+}
+
+.header .upper input{
+    border-radius: 1rem;
+    border: none;
+    background-color: #eee;
+    max-height: 6rem;
+    max-width: 60rem;
+    padding: 1rem;
+}
+
+.header .upper .inner-part-left{
+    padding-left: 2vw;
+    padding-right: 2vw;
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    align-content: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.header .upper .inner-part-right{
+    padding-left: 2vw;
+    padding-right: 2vw;
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: 3vw 3vw 6vw;
+    align-items: center;
+    gap: 1vw;
+    justify-self: center;
+}
+
+
+
+.header .upper .inner-part-right h3{
+    font-size: var(--font-size-main);
+    font-weight: 800;
+}
+
+
+
+
 
