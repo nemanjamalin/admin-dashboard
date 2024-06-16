@@ -5,7 +5,7 @@
 }
 
 :root{
-    --font-size-400: 1.9rem;
+    --font-size-400: 1.7rem;
 
     --font-size-main : 1.5rem;
 
@@ -15,6 +15,7 @@
     --color-white: #fff;
     --color-blue-400: #60a5fa;
     --color-orange-main: #fbbf24;
+    --color-gray-main: #a3a3a3;
 }
 
 html{
@@ -81,7 +82,7 @@ section.main-section{
 
     display: grid;
     grid-template-rows: 1fr 1fr 5fr;
-    gap: 2vh;
+    /* gap: 2vh; */
 }
 
 
@@ -95,6 +96,7 @@ section.main-section{
     align-items: center;
     gap: clamp(3rem, 2.90vw,5rem);
     /* outline: 1px solid red; */
+    align-self: flex-start;
 }
 
 .sidebar .logo svg{
@@ -147,6 +149,8 @@ section.main-section{
 .header{
     display: grid;
     grid-template-rows: 1fr 1fr;
+    padding-bottom: 1.5rem;
+    min-height: 15rem;
 }
 
 .header-part{
@@ -272,7 +276,7 @@ section.main-section{
     border: 1px solid red;
 }
 
-.main-left-part h2{
+.main-section h2{
     font-size: calc(var(--font-size-700) - 0.3rem);
     font-weight: 500;
 }
@@ -284,8 +288,39 @@ section.main-section{
     gap: 2rem;
 }
 .main-right-part .right-inner-division{
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    gap: 1.5rem;
 }
+
+.right-inner-division .inner-display-right{
+    /* border: 1px solid red; */
+    padding: 2rem;
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    gap: 1rem;
+    background-color: var(--color-white);
+}
+
+.announcement, .profile{
+    /* border: 1px solid red; */
+}
+
+.announcement:nth-child(1), .announcement:nth-child(2){
+    border-bottom: 1px solid var(--color-gray-main);
+    padding-bottom: 1.5rem;
+}
+
+.announcement h4{
+    font-size: var(--font-size-400);
+}
+
+.announcement p{
+    font-size: var(--font-size-main);
+}
+
+
 
 
 
