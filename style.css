@@ -15,7 +15,7 @@
     --color-white: #fff;
     --color-blue-400: #60a5fa;
     --color-orange-main: #fbbf24;
-    --color-gray-main: #a3a3a3;
+    --color-gray-main: #475569;
 }
 
 html{
@@ -23,6 +23,9 @@ html{
     font-family: "Roboto", sans-serif;
 }
 
+a:visited{
+    color: #000;
+}
 
 .avatar{
     width: calc(2vh + 3rem);
@@ -81,7 +84,7 @@ section.main-section{
     padding: 2rem;
 
     display: grid;
-    grid-template-rows: 1fr 1fr 5fr;
+    grid-template-rows: 0.65fr 1fr 5fr;
     /* gap: 2vh; */
 }
 
@@ -155,7 +158,7 @@ section.main-section{
 
 .header-part{
     /* border-bottom: red 2px solid; */
-    padding: 0 2vw 0 2vw;
+    padding: 0 4rem 0 4rem;
 }
 
 .header .upper{
@@ -296,7 +299,7 @@ section.main-section{
 
 .right-inner-division .inner-display-right{
     /* border: 1px solid red; */
-    padding: 2rem;
+    padding: 4rem;
     display: grid;
     grid-template-rows: repeat(auto-fit, 1fr);
     gap: 1rem;
@@ -312,15 +315,37 @@ section.main-section{
     padding-bottom: 1.5rem;
 }
 
-.announcement h4{
+.main-right-part h4{
     font-size: var(--font-size-400);
 }
 
-.announcement p{
+
+
+.main-right-part p{
     font-size: var(--font-size-main);
+    color: var(--color-gray-main);
 }
 
 
+/* PROFILE SECTION */
+
+.profile{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+
+.profile svg, .profile div{
+    align-self: center;
+}
+
+
+
+.profile .tag{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 0.2rem;
+}
 
 
 
